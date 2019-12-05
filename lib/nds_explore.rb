@@ -9,12 +9,7 @@ def pretty_print_nds(nds)
 end
 
 def print_first_directors_movie_titles
-  binding.pry
-  directors_database[0].each do |ele|
-    ele.each do |movie|
-      movie.each_with_index do |movie, idx|
-        print movie[idx]
-      end
-    end
-  end
+  directors_database[0][:movies].each do |movie|
+    puts movie[:title]
+ end
 end
